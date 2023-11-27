@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--  default color-->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+
+    <!--  main app color-->
+    <color name="spotify_light_green">#00cc00</color>
+    <color name="spotify_origin_green">#1DB954</color>
+    <color name="spotify_deep_green">#044d04</color>
+    <color name="spotify_light_black">#212121</color>
+    <color name="spotify_deep_black">#121212</color>
+    <color name="spotify_deep_gray">#535353</color>
+    <color name="spotify_light_gray">#E3E3E3</color>
+    <color name="spotify_deep_white">#D7FFD7</color>
+
+    <!-- most frequent color -->
+    <color name="colorPrimary">@color/spotify_origin_green</color>
+    <color name="colorSecondary">@color/spotify_light_green</color>
+    <color name="colorBackground">@color/spotify_light_gray</color>
+    <color name="colorItemBackground">@color/white</color>
 </resources>

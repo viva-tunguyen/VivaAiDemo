@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="space_tiny">2dp</dimen>
+    <dimen name="space_small">4dp</dimen>
+    <dimen name="space">8dp</dimen>
+    <dimen name="space_large">16dp</dimen>
+    <dimen name="space_big">32dp</dimen>
+    <dimen name="space_ultimate">48dp</dimen>
+
+    <dimen name="square_button_size">@dimen/space_ultimate</dimen>
+    <dimen name="progress_size">@dimen/space_large</dimen>
+</resources>

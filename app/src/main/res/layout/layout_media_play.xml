@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/mediaPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_play"
+        android:padding="@dimen/space"
+        android:background="@drawable/bg_play_btn_state"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/mediaPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pause"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/mediaProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="@dimen/space"
+        android:thumbTint="@color/colorSecondary"
+        android:progressTint="@color/colorSecondary"
+        app:layout_constraintBottom_toBottomOf="@id/mediaPlay"
+        app:layout_constraintEnd_toStartOf="@id/count_down"
+        app:layout_constraintStart_toEndOf="@id/mediaPlay"
+        app:layout_constraintTop_toTopOf="@id/mediaPlay" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:15"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/mediaPlay"
+        app:layout_constraintBottom_toBottomOf="@id/mediaPlay"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

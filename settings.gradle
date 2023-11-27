@@ -10,6 +10,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven {
+            url "https://msh-jfrog.sohatv.vn:443/artifactory/core_ai-gradle-dev-local/"
+        }
     }
 }
 

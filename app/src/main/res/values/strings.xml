@@ -1,3 +1,39 @@
 <resources>
+    <!-- App Configure -->
     <string name="app_name">VivaAiDemo</string>
+
+    <!-- General -->
+    <string name="demo">Demo</string>
+    <string name="setting">Setting</string>
+    <string name="speech">Speech</string>
+    <string name="ocr">Ocr</string>
+    <string name="face">Face</string>
+    <string name="text">Text</string>
+    <string name="convert">Convert</string>
+    <string name="detect">Detect</string>
+    <string name="upload">Upload</string>
+    <string name="result">Result</string>
+    <string name="log">Log</string>
+
+    <!-- Special -->
+    <string name="hint_input_link">Input link</string>
+    <string name="hint_input_text">Input text</string>
+    <string name="default_image_des">Image Describe</string>
+    <string name="speech_to_text">Speech to text</string>
+
+    <!-- Trash -->
+    <string name="hello_blank_fragment">Hãy nạp thêm tiền để chúng tôi hỗ trợ bạn tính năng tuyệt vời này. Donate tùy tâm tại : 4270789594 - BIDV - NGUYEN THE TUNG</string>
+    <string name="text_normal">Text normalization</string>
+    <string name="face_detect">Face Detect</string>
+    <string name="hint_input_spinner">Touch me</string>
+    <string name="hint_input_output">Output format file</string>
+    <string name="hint_input_rate">Rate of audio file</string>
+    <string name="hint_input_voice">Voice of speaker</string>
+    <string name="retry">Try Again</string>
+    <string name="errorMsg">Oopss, something went wrong or this feature is coming soon.\n Click button to try again =.=</string>
+    <string name="about">About app</string>
+    <string name="version">Version</string>
+    <string name="document">Document</string>
+    <string name="notion"><a href="https://mysoha.notion.site/T-i-li-u-t-ch-h-p-5480b9e710ef48b4a831332568214f27?pvs=4">Notion</a></string>
+    <string name="app">Application name</string>
 </resources>

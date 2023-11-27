@@ -1,0 +1,108 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/space"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/space"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/colorItemBackground">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/about_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_about"
+            android:padding="@dimen/space" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/about_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            style="@style/BoldTitle"
+            android:layout_marginStart="@dimen/space"
+            app:layout_constraintTop_toTopOf="@id/about_icon"
+            app:layout_constraintBottom_toBottomOf="@id/about_icon"
+            app:layout_constraintStart_toEndOf="@id/about_icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app"
+            style="@style/BaseText"
+            android:padding="@dimen/space_small"
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_marginStart="@dimen/space_large"
+            app:layout_constraintTop_toBottomOf="@id/about_icon"
+            app:layout_constraintStart_toStartOf="@id/about_icon"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/app_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            style="@style/BaseText"
+            android:padding="@dimen/space_small"
+            app:layout_constraintTop_toTopOf="@id/app"
+            app:layout_constraintBottom_toBottomOf="@id/app"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/space"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            style="@style/BaseText"
+            android:padding="@dimen/space_small"
+            android:layout_marginTop="@dimen/space_large"
+            app:layout_constraintTop_toBottomOf="@id/app"
+            app:layout_constraintStart_toStartOf="@id/app"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/version_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/version"
+            style="@style/BaseText"
+            android:padding="@dimen/space_small"
+            app:layout_constraintTop_toTopOf="@id/version"
+            app:layout_constraintBottom_toBottomOf="@id/version"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/space"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/document"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/document"
+            style="@style/BaseText"
+            android:padding="@dimen/space_small"
+            android:layout_marginTop="@dimen/space_large"
+            android:layout_marginStart="@dimen/space_large"
+            app:layout_constraintTop_toBottomOf="@id/version"
+            app:layout_constraintStart_toStartOf="@id/about_icon"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/document_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/notion"
+            style="@style/BaseText"
+            android:padding="@dimen/space_small"
+            app:layout_constraintTop_toTopOf="@id/document"
+            app:layout_constraintBottom_toBottomOf="@id/document"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="@dimen/space"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
