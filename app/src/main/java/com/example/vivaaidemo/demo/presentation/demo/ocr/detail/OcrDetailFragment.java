@@ -34,7 +34,10 @@ import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import org.json.JSONObject;
+
 import java.lang.reflect.Field;
+import java.util.Iterator;
 
 public class OcrDetailFragment extends BaseFragment<FragmentOcrDetailBinding> {
     /* **********************************************************************
@@ -128,7 +131,7 @@ public class OcrDetailFragment extends BaseFragment<FragmentOcrDetailBinding> {
         });
         viewModel.getProgress().observe(requireActivity(), isShow -> {
             try {
-                if(isShow == null) {
+                if (isShow == null) {
                     binding.ocrField.progress.setVisibility(View.INVISIBLE);
                     return;
                 }
@@ -159,27 +162,49 @@ public class OcrDetailFragment extends BaseFragment<FragmentOcrDetailBinding> {
             }
         });
         viewModel.getData().observe(requireActivity(), data -> {
-            if (data == null) return;
-
-            Object object = data.data;
-            String log = new GsonBuilder().setPrettyPrinting().create().toJson(object);
-            binding.ocrField.log.setText(log);
-
             try {
-                Field[] fields = object.getClass().getDeclaredFields();
-                binding.ocrField.texts.removeAllViews();
-                for (Field item : fields) {
-                    LayoutInflater inflater = LayoutInflater.from(getContext());
-                    LayoutOcrDetailResultBinding itemBinding = LayoutOcrDetailResultBinding.inflate(inflater, null, false);
-                    itemBinding.text.setText(String.format("%s = %s", item.getName(), item.get(object)));
+                if (data == null) return;
+                Log.d(TAG, "get data: ");
 
-                    ViewGroup.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                    binding.ocrField.texts.addView(itemBinding.getRoot(), params);
+                Gson builder = new GsonBuilder().setPrettyPrinting().create();
+                binding.ocrField.texts.removeAllViews();
+                if (data.data != null) {
+                    Object object = data.data;
+                    Log.d(TAG, "get data - data object : " + gson.toJson(object));
+
+                    Field[] fields = object.getClass().getDeclaredFields();
+                    for (Field item : fields) {
+                        createResultItem(item.getName(), item.get(object));
+                    }
+
+                    binding.ocrField.log.setText(builder.toJson(object));
+                } else {
+                    JSONObject object = data.object;
+                    Log.d(TAG, "get data - no data object, user json instead : " + gson.toJson(object));
+
+                    Iterator<String> keys = object.keys();
+                    while (keys.hasNext()) {
+                        String key = keys.next();
+                        createResultItem(key, object.get(key));
+                    }
+
+                    binding.ocrField.log.setText(builder.toJson(object));
                 }
+
+                Log.d(TAG, "get data: end");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         });
+    }
+
+    private void createResultItem(String key, Object value) {
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        LayoutOcrDetailResultBinding itemBinding = LayoutOcrDetailResultBinding.inflate(inflater, null, false);
+        itemBinding.text.setText(String.format("%s = %s", key, value));
+
+        ViewGroup.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        binding.ocrField.texts.addView(itemBinding.getRoot(), params);
     }
 
     @Override

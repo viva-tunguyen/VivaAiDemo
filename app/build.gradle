@@ -55,5 +55,5 @@ dependencies {
 
     implementation 'com.github.bumptech.glide:glide:4.16.0'
 
-    implementation 'vcc.viv.ai:vcc-sdk-ai:1.0.2'
+    implementation 'vcc.viv.ai:vcc-sdk-ai:1.0.4'
 }
