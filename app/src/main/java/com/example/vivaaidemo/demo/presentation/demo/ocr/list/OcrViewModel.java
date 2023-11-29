@@ -22,6 +22,7 @@ public class OcrViewModel extends BaseViewModel {
             add(OcrType.PASSPORT);
             add(OcrType.HEALTH_INSURANCE);
             add(OcrType.IELTS_CERTIFICATE);
+            add(OcrType.VISA);
             add(OcrType.VEHICLE_LICENSE);
             add(OcrType.VEHICLE_REGISTRATION);
             add(OcrType.VEHICLE_INSPECTION);
