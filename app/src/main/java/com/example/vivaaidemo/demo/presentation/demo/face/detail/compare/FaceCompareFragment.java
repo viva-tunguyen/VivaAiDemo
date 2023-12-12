@@ -65,6 +65,9 @@ public class FaceCompareFragment extends BaseFragment<FragmentFaceCompareBinding
         super.onViewCreated(view, savedInstanceState);
         viewModel = new ViewModelProvider(requireActivity()).get(FaceCompareViewModel.class);
 
+        binding.log.setVisibility(logVisibility);
+        binding.logTitle.setVisibility(logVisibility);
+
         binding.back.setOnClickListener(v -> getParentFragmentManager().popBackStack());
 
         firstImagePicker = registerForActivityResult(
