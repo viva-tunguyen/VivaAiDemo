@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/colorItemBackground"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/register"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/face_register"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/register_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/register" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/predict"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/face_predict"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/register" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/predict_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/predict" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/checkin_history"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/checkin_history"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/predict" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/checkin_history_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/checkin_history" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/checkin_history_filter"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/checkin_history_filter"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/checkin_history" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/checkin_history_filter_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/checkin_history_filter" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/get_info"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/get_info"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/checkin_history_filter" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/get_info_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/get_info" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/update_info"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/update_info"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/get_info" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/update_info_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/update_info" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/fas_predict"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/fas_predict"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/update_info" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/fas_predict_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/fas_predict" />-->
+
+<!--        <androidx.appcompat.widget.AppCompatTextView-->
+<!--            android:id="@+id/compare"-->
+<!--            style="@style/BaseText"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="?attr/selectableItemBackground"-->
+<!--            android:padding="@dimen/space_large"-->
+<!--            android:text="@string/compare"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/fas_predict" />-->
+
+<!--        <com.google.android.material.divider.MaterialDivider-->
+<!--            android:id="@+id/compare_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="1px"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/compare" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

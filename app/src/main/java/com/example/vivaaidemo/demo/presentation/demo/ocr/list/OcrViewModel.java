@@ -2,6 +2,7 @@ package com.example.vivaaidemo.demo.presentation.demo.ocr.list;
 
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.vivaaidemo.R;
 import com.example.vivaaidemo.demo.common.BaseViewModel;
 
 import java.util.ArrayList;
@@ -44,16 +45,18 @@ public class OcrViewModel extends BaseViewModel {
      ********************************************************************** */
     public enum OcrType {
         // General
-        ID_CARD("Vietnamese ID Card"), PASSPORT("Passport"), HEALTH_INSURANCE("Health Insurance"), IELTS_CERTIFICATE("Ielts Certificate"), VISA("Visa"),
+        ID_CARD("Vietnamese ID Card", R.drawable.ic_identification), PASSPORT("Passport", R.drawable.ic_identification), HEALTH_INSURANCE("Health Insurance", R.drawable.ic_identification), IELTS_CERTIFICATE("Ielts Certificate", R.drawable.ic_identification), VISA("Visa", R.drawable.ic_identification),
         // Vehicle
-        VEHICLE_LICENSE("Vehicle License"), VEHICLE_REGISTRATION("Vehicle Registration"), VEHICLE_INSPECTION("Vehicle Inspection"),
+        VEHICLE_LICENSE("Vehicle License", R.drawable.ic_vehicle), VEHICLE_REGISTRATION("Vehicle Registration", R.drawable.ic_vehicle), VEHICLE_INSPECTION("Vehicle Inspection", R.drawable.ic_vehicle),
         // Sucking
-        PAYMENT_ORDER("Payment Order"), BUSINESS_REGISTRATION("Business Registration"), DATA_TABLE("Data Table"), BILL("Bill"), KEY_VALUE_PAIR("Key Value Pair");
+        PAYMENT_ORDER("Payment Order", R.drawable.ic_business), BUSINESS_REGISTRATION("Business Registration", R.drawable.ic_business), DATA_TABLE("Data Table", R.drawable.ic_general), BILL("Bill", R.drawable.ic_general), KEY_VALUE_PAIR("Key Value Pair", R.drawable.ic_general);
 
         public String title;
+        public int icon;
 
-        OcrType(String title) {
+        OcrType(String title, int icon) {
             this.title = title;
+            this.icon = icon;
         }
     }
 }

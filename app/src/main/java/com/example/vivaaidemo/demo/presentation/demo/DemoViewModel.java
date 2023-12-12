@@ -7,6 +7,7 @@ import com.example.vivaaidemo.R;
 import com.example.vivaaidemo.demo.common.BaseViewModel;
 import com.example.vivaaidemo.demo.presentation.common.BaseTab;
 import com.example.vivaaidemo.demo.presentation.common.EmptyFragment;
+import com.example.vivaaidemo.demo.presentation.demo.face.list.FaceFragment;
 import com.example.vivaaidemo.demo.presentation.demo.ocr.list.OcrFragment;
 import com.example.vivaaidemo.demo.presentation.demo.speech.SpeechFragment;
 
@@ -26,7 +27,7 @@ public class DemoViewModel extends BaseViewModel {
         List<DemoTab> tabs = new ArrayList<DemoTab>() {{
             add(new DemoTab(0, DemoType.SPEECH, R.string.speech, null, SpeechFragment.class));
             add(new DemoTab(1, DemoType.OCR, R.string.ocr, null, OcrFragment.class));
-            add(new DemoTab(2, DemoType.FACE, R.string.face, null, EmptyFragment.class));
+            add(new DemoTab(2, DemoType.FACE, R.string.face, null, FaceFragment.class));
         }};
         this.tabs = new MutableLiveData<>(tabs);
     }

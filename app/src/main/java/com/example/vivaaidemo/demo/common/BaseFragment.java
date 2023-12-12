@@ -16,7 +16,7 @@ public abstract class BaseFragment<VB extends ViewBinding> extends Fragment {
      ********************************************************************** */
     protected final Inflate<VB> inflate;
     protected VB binding;
-
+    protected NetworkUtil networkChangeReceiver;
     protected final Gson gson = new Gson();
 
     /* **********************************************************************

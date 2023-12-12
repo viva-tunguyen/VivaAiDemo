@@ -223,7 +223,7 @@ public class OcrDetailFragment extends BaseFragment<FragmentOcrDetailBinding> {
         if (requestCode == OCR_DETAIL_REQ_IMAGE_CODE && resultCode == RESULT_OK) {
             try {
                 Uri fileUri = data.getData();
-                String path = new FileUtil(requireContext()).getPath(fileUri);
+                String path = new FileUtil(requireContext(), requireActivity()).getPath(fileUri);
                 Log.d(TAG, "onActivityResult: path absolute: " + path);
                 binding.ocrField.textContent.setText(path);
             } catch (Exception e) {

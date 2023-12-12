@@ -36,4 +36,38 @@
     <string name="document">Document</string>
     <string name="notion"><a href="https://mysoha.notion.site/T-i-li-u-t-ch-h-p-5480b9e710ef48b4a831332568214f27?pvs=4">Notion</a></string>
     <string name="app">Application name</string>
+
+    <string name="image_disable">Add face image</string>
+    <string name="image_success">Add image successfully</string>
+    <string name="hint_input_name">Full name</string>
+    <string name="hint_input_email">Email</string>
+    <string name="hint_input_e_code">Employee code</string>
+    <string name="face_mask">Face mask</string>
+    <string name="face_register">Face Register</string>
+    <string name="face_predict">Face Detect</string>
+    <string name="checkin_history">Check-in History List</string>
+    <string name="checkin_history_filter">Check-in History Filter</string>
+    <string name="get_info">User Info</string>
+    <string name="update_info">User Info Update</string>
+    <string name="fas_predict">Fas Detect</string>
+    <string name="face_compare">Face Compare</string>
+    <string name="compare">Compare</string>
+    <string name="hint_input_record_number">Number of records</string>
+    <string name="hint_input_from_date">From</string>
+    <string name="hint_input_to_date">To</string>
+    <string name="check">Check</string>
+    <string name="filter">Filter</string>
+    <string name="get">Get</string>
+    <string name="hint_input_telegram">Telegram chat id</string>
+    <string name="register">Register</string>
+    <string name="update">Update</string>
+    <string name="probability">Probability</string>
+    <string name="time">Check-in Time</string>
+    <string name="hint_input_longitude">Longitude</string>
+    <string name="hint_input_latitude">Latitude</string>
+    <string name="hint_input_network_ip">IP Address</string>
+    <string name="hint_input_network_name">Network name</string>
+    <string name="hint_input_network_mac">Mac Address</string>
+    <string name="unvailable_network">No network connection</string>
+    <string name="unvailable_wifi">No wifi connection</string>
 </resources>

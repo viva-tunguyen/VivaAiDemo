@@ -14,8 +14,20 @@
         android:padding="@dimen/space_large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="@id/icon"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/space_great"
+        app:layout_constraintDimensionRatio="1:1"
+        android:tint="@color/colorPrimary"
+        android:src="@drawable/ic_user_info"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <com.google.android.material.divider.MaterialDivider
         android:layout_width="match_parent"

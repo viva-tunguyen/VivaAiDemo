@@ -264,7 +264,7 @@ public class SpeechFragment extends BaseFragment<FragmentSpeechBinding> {
         if (requestCode == STT_REQ_CODE && resultCode == RESULT_OK) {
             try {
                 Uri fileUri = data.getData();
-                String path = new FileUtil(requireContext()).getPath(fileUri);
+                String path = new FileUtil(requireContext(), requireActivity()).getPath(fileUri);
                 binding.speechToText.textContent.setText(path);
             } catch (Exception e) {
                 e.printStackTrace();

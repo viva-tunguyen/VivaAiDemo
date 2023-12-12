@@ -52,6 +52,7 @@ public class ItemOcrAdapter extends RecyclerView.Adapter<ItemOcrAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         OcrViewModel.OcrType item = data.get(position);
         holder.binding.text.setText(item.title);
+        holder.binding.icon.setImageResource(item.icon);
         holder.binding.getRoot().setOnClickListener(view -> {
             if (callback != null) {
                 callback.onItemClick(item, position);
