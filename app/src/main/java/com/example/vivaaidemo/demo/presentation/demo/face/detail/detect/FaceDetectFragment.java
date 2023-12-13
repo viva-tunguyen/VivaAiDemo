@@ -40,20 +40,16 @@ import com.example.vivaaidemo.demo.common.NetworkUtil;
 import com.example.vivaaidemo.demo.presentation.demo.face.image.ImagePreviewFragment;
 import com.google.android.material.snackbar.Snackbar;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import java.lang.reflect.Field;
-
 
 public class FaceDetectFragment extends BaseFragment<FragmentFaceDetectBinding> {
     /* **********************************************************************
      * Variable
      ********************************************************************** */
     private final String FACE_IMAGE_TYPE = "image/*";
-    private final int logVisibility = BuildConfig.DEBUG ? View.VISIBLE : View.GONE;
     private static final int REQUEST_CODE_ENABLE_LOCATION = 201;
     private final int FACE_REGISTER_REQ_PERMISSION_BELOW_11_CODE = 300;
+    private final int logVisibility = BuildConfig.DEBUG ? View.VISIBLE : View.GONE;
     private static final String TAG = FaceDetectFragment.class.getSimpleName();
     private FaceDetectViewModel viewModel;
     private ActivityResultLauncher<Intent> imagePickerLauncher, permissionLauncher;
@@ -147,14 +143,12 @@ public class FaceDetectFragment extends BaseFragment<FragmentFaceDetectBinding> 
         binding.detect.setOnClickListener(v -> {
             viewModel.setLocation(requireContext(), requireActivity());
             String image = binding.imageEnable.path.getText().toString();
-            String wifiMac = binding.networkMacContent.getText().toString();
-            String wifiIp = binding.networkIpContent.getText().toString();
-            String wifiName = binding.networkNameContent.getText().toString();
+            String mac = binding.networkMacContent.getText().toString();
+            String ip = binding.networkIpContent.getText().toString();
+            String name = binding.networkNameContent.getText().toString();
             String latitude = binding.locationLatitudeContent.getText().toString();
             String longitude = binding.locationLongitudeContent.getText().toString();
-            String wifi = parseWifi(wifiIp, wifiMac, wifiName);
-            String location = parseLocation(latitude, longitude);
-            viewModel.faceDetect(requireContext(), image, wifi, location);
+            viewModel.faceDetect(requireContext(), image, mac, ip, name, latitude, longitude);
         });
 
         viewModel.getMessage().observe(requireActivity(), message -> {
@@ -298,29 +292,6 @@ public class FaceDetectFragment extends BaseFragment<FragmentFaceDetectBinding> 
 
         ViewGroup.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         binding.texts.addView(itemBinding.getRoot(), params);
-    }
-
-    private String parseLocation(String latitude, String longitude) {
-        JSONObject json = new JSONObject();
-        try {
-            json.put("latitude", latitude);
-            json.put("longitude", longitude);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return json.toString();
-    }
-
-    private String parseWifi(String ip, String mac, String name) {
-        JSONObject json = new JSONObject();
-        String[] array = {ip, mac};
-        try {
-            json.put("ip", array);
-            json.put("name", name);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return json.toString();
     }
 
     /* **********************************************************************

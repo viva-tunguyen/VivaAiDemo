@@ -112,10 +112,22 @@ public class FaceDetectViewModel extends BaseViewModel {
         return permissions;
     }
 
-    public void faceDetect(Context context, String link, String wifi, String location) {
-        if (TextUtils.isEmpty(link)) {
+    public void faceDetect(Context context, String image, String macAddress, String ipAddress, String networkName, String lat, String lon) {
+        if (TextUtils.isEmpty(image)) {
             message.setValue("Please fill some text");
             return;
+        }
+        double latitude, longitude;
+
+        if(!TextUtils.isEmpty(lat)){
+            latitude = Double.parseDouble(lat);
+        } else {
+            latitude = 0;
+        }
+        if(!TextUtils.isEmpty(lon)){
+            longitude = Double.parseDouble(lon);
+        } else {
+            longitude = 0;
         }
 
         progress.postValue(true);
@@ -141,7 +153,7 @@ public class FaceDetectViewModel extends BaseViewModel {
             }
         };
         if (checkPermission(context)) {
-            manager.runBackground(() -> manager.face().faceDetect(callback, link, wifi, location));
+            manager.runBackground(() -> manager.face().faceDetect(callback, image, macAddress, ipAddress, networkName, latitude, longitude));
         }
     }
 

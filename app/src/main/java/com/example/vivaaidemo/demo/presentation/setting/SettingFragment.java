@@ -39,7 +39,7 @@ public class SettingFragment extends BaseFragment<FragmentSettingBinding> {
         }
 
         binding.documentLink.setOnClickListener(v -> {
-            Uri uri = Uri.parse("https://mysoha.notion.site/T-i-li-u-t-ch-h-p-5480b9e710ef48b4a831332568214f27?pvs=4"); // missing 'http://' will cause crashed
+            Uri uri = Uri.parse("https://mysoha.notion.site/T-i-li-u-t-ch-h-p-5480b9e710ef48b4a831332568214f27?pvs=4");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(intent);
         });
